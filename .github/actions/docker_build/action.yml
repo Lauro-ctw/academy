@@ -23,7 +23,7 @@ runs:
       shell: bash
 
     - name: Define Image name
-      run: echo "DOCKER_IMAGE_NAME=${{inputs.image_name}}:${{env.TAG}} >> $GITHUB_ENV
+      run: echo "DOCKER_IMAGE_NAME=${{inputs.image_name}}:${{env.TAG}}" >> $GITHUB_ENV
       shell: bash
 
     - name: Build Docker Image

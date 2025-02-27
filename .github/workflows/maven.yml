@@ -21,6 +21,7 @@ jobs:
         path_dockerfile: src/main/docker/Dockerfile.jvm
         image_name: laurindocosta013/academy
         tag_name: v1
+
     - uses:  Lauro-ctw/academy/.github/actions/docker_push@main
       with:
         docker_username: ${{vars.DOCKERHUB_USERNAME}}
