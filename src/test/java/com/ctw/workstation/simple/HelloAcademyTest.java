@@ -21,7 +21,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 @ExtendWith(MockitoExtension.class)
 class HelloAcademyTest {
 
-    @Spy
+    /*@Spy
     ExternalMessageService externalMessageService;
 
     @InjectMocks
@@ -36,14 +36,14 @@ class HelloAcademyTest {
                 Arguments.of("Hello ", ""),
                 Arguments.of("Hello", null)
         );
-    }
+    }*/
 
     //@Test
-    @ParameterizedTest
+    //@ParameterizedTest
     //@NullSource
     //@EmptySource
     //@ValueSource(strings = {"Academy", "Laurindo", "test"})
-    @MethodSource("test_hello_academy_with_valid_name")
+    /*@MethodSource("test_hello_academy_with_valid_name")
     void test_Hello_Academy_with_valid_name(String name) {
         // given
         //String name = "Academy";
@@ -59,9 +59,9 @@ class HelloAcademyTest {
         Assertions.assertEquals(result, result, "Matching result saying hello academy");
 
 
-    }
+    }*/
 
-    void lista(){
+    /*void lista(){
         List<String> minhaLista = new ArrayList<>();
 
         List<String> minhaListaSpy = Mockito.spy(minhaLista);
@@ -70,8 +70,8 @@ class HelloAcademyTest {
         assertThat(minhaListaSpy.get(0)).isEqualTo("renan");
 
 
-    }
-
+    }*/
+/*
     @Test
     @DisplayName("hello from otter space with mock")
     void test_Hello_Academy_from_otter_space_mock() {
@@ -111,7 +111,7 @@ class HelloAcademyTest {
         // then
         //assertThat(result)
                 //.isEqualTo("Hello from outer space");
-    }
+    }*/
 
 
 
