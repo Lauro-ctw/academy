@@ -13,10 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    
+
     - uses: Lauro-ctw/academy/.github/actions/maven_build@main
 
-    - name: Build Docker
-      run: docker build . --file src/main/docker/Dockerfile.jvm --tag academy:$(date +%s)
-    - name: list dockes
-      run: docker images
+    - uses: Lauro-ctw/academy/.github/actions/docker_build@main
