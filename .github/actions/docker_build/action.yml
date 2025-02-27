@@ -22,13 +22,15 @@ runs:
         fi
       shell: bash
 
-    - name: Build Docker
-      run: docker build . --file ${{inputs.path_dockerfile}} --tag ${{inputs.image_name}}:${{env.TAG}}
-    #- name: list dockes
-     # run: docker images
+    - name: Define Image name
+      run: echo "DOCKER_IMAGE_NAME=${{inputs.image_name}}:{{env.TAG}} >> $GITHUB_ENV
+      shell: bash
+
+    - name: Build Docker Image
+      run: docker build . --file ${{inputs.path_dockerfile}} --tag ${{DOCKER_IMAGE_NAME}}:${{env.TAG}}
       shell: bash
 
     - name: list docker images
       run: docker images
-
       shell: bash
+
