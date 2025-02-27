@@ -21,3 +21,7 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: list dockes
+      uses: docker images
+    - name: Build Docker
+      uses: Lauro-ctw/academy/.github/actions/maven_build@main
