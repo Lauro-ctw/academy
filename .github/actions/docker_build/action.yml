@@ -5,13 +5,9 @@ runs:
   using: 'composite'
 
   steps:
-    - name: Set up JDK 21
-    - uses: actions/setup-java@v4
-    - with:
-      - java-version: '21'
-      - distribution: 'temurin'
-      - cache: maven
+
     - name: Build Docker
       run: docker build . --file src/main/docker/Dockerfile.jvm --tag academy:$(date +%s)
     - name: list dockes
       run: docker images
+      shell: bash
